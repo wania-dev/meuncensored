@@ -3,8 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    min-height: 500px;
+    gap: 10px;
+/*     min-height: 500px; */
     margin: 5px;
 }
   
@@ -46,7 +46,7 @@
     white-space: nowrap;
     width: 95%;
     /* border: 1px solid black; */
-    margin: 15px;
+    margin: 10px;
 }
 
 .button-category{
