@@ -1,0 +1,128 @@
+*{
+    margin: 0; padding: 0;
+}
+body{
+    /* border: 1px solid black; */
+    max-width: 800px!important;
+    min-width: 100px!important;
+    padding: 0px 10px;
+}
+.heading {
+    /* border: 1px solid blue; */
+    font-family: Abril Fatface;
+    font-size: 50px;
+}
+
+.category-display{
+    font-family: Pathway Extreme;
+    font-size: 15px;
+    /* font-weight: bold; */
+    /* border: 1px dotted orange; */
+    padding: 10px 0px;
+}
+
+.introduction, .date{
+    /* border: 1px solid green; */
+    font-family: Pathway Extreme;
+    color: black;
+    margin: 10px 0;
+}
+.date{font-size: 14px; color: grey;}
+
+.coverImage{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article{
+    padding: 10px;
+    font-size: 17px;
+    color: black;
+    font-family: Pathway Extreme;
+}
+p{
+    padding: 10px 0px;
+}
+
+/* recommendations */
+.recommended{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto;
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+    /* border: 1px solid black; */
+    box-shadow: 6px 6px 5px #888888;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.blog-card:hover{
+    box-shadow: 0px 0px 2px #888888;
+}
+.blog-card img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+.content {
+    padding: 5px; margin: 0;
+    height: fit-content;
+}
+.content h2{
+    font-size: 16px;
+    padding: 0; margin: 0;
+    font-family: Pathway Extreme;
+}
+.content p {
+    font-size: 12px;
+    font-family: Pathway Extreme;
+    padding: 0; margin: 0;
+}
+
+@media (max-width: 500px){
+
+    .heading{font-size: 25px;}
+
+    .category-display, .introduction{font-size: 14px;}
+
+    .date{font-size: 12px;}
+
+    .article{font-size: 15px;}
+}
+/* social media sharing */
+.fa {
+    padding: 10px;
+    font-size: 25px;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 25px;
+}
+.fa:hover {
+      opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-instagram {
+    background: #E4405F;
+    color: white;
+}
+.recommended a{color: black;}

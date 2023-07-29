@@ -1,0 +1,58 @@
+html {
+    margin: 0px auto;
+    padding: 0px;
+}
+body{
+    max-width: 1000px;
+    min-width: 100px;
+    margin: auto;
+}
+.wrapper{
+    min-height: 50vh;
+}
+a{
+    text-decoration: none;
+    color: crimson;
+}
+nav {
+    position: sticky; /* Updated property value */
+    position: -webkit-sticky; /* Added vendor prefix for compatibility */
+    top: 0;
+    background: white;
+    border-bottom: 1px solid black;
+    text-align: center;
+    z-index: 100;
+}
+nav a{
+    font-size: 30px;
+    font-family: Abril Fatface;
+    color: black;
+}
+@media(max-width: 600px){
+    nav a{font-size: 25px;}
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: Pathway Extreme;
+    position: relative; bottom: -8px;
+    font-size: 13px;
+}
+
+footer p {padding: 0; margin: 0;}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+@media(max-width: 500px){
+    body::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #d55959;
+}

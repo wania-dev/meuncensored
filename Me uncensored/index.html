@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home | me uncensored</title>
+    <link rel="shortcut icon" href="/multimedia/MU.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/public.css">
+    <link rel="stylesheet" href="/global/fontFamily.css">
+    <link rel="stylesheet" href="/global/navBar, footer, scrollbar.css">
+    <script src="/public.js" defer></script>
+    <script src="/global/objects.js"></script>
+    <!-- search/cancel icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- instagram icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="wrapper">
+    <nav>
+        <a href="#" rel="noopener noreferrer">me uncensored</a>
+    </nav>
+
+    <!-- categories -->
+    <div class="categories">
+        <!-- category spans -->
+        <div class="button-category">
+            <a href="https://www.instagram.com/meuncensoredreal/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" style="font-size: 23px;color:red"></i></a>
+            <span class="material-symbols-outlined search" onclick="searchClicked()">search</span>
+            <input type="text" placeholder="Search..." id="searchInput">
+            <button class="all" onclick="displayPosts(0, 'all');">All</button>
+            <button class="lit" onclick="displayPosts(0, 'LITERATURE');">Literature</button>
+            <button class="ch" onclick="displayPosts(0, 'CULTURE & HERITAGE');">Culture & heritage</button>
+            <button class="tech" onclick="displayPosts(0, 'TECHNOLOGY & INNOVATION');">Technology & Innovation</button>
+            <button class="polC" onclick="displayPosts(0, 'POLITICS & CURRENT EVENTS');">Politics & Current events</button>
+        </div>
+    </div>
+
+    <!-- main blog -->
+    <div class="mainBlog"></div>
+
+    <!-- where all the blog articles go -->
+    <div class="blogContainer"></div>
+ </div>
+
+ <footer>
+    <p>Developed by <a href="wwwd.vercel.app" target="_blank" rel="noopener noreferrer">Wania</a>. All rights reserved.</p>
+    <p>© 2023 me uncensored LLC</p>
+</footer>
+
+</body>
+</html>

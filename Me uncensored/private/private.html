@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Page | me uncensored</title>
+    <link rel="shortcut icon" href="/multimedia/MU.ico" type="image/x-icon">
+    <link rel="stylesheet" href="private.css">
+    <link rel="stylesheet" href="/global/fontFamily.css">
+    <link rel="stylesheet" href="/global/navBar, footer, scrollbar.css">
+    <script src="private.js" defer></script>
+    <script src="/global/objects.js"></script>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <nav>
+            <a href="/public/public.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
+        </nav>
+
+        <form action="article">
+
+            <div class="meta-keywords-div">
+                <label for="keywords">Keywords for article:</label> <br>
+                <button onclick="addKeywords(event)">Add Keywords</button> <br>
+                <p class="required">
+                    *Conduct keyword research to identify relevant keywords for your article. <br><br>
+                    *Avoid keyword stuffing and maintain a balanced keyword density.
+                </p>
+                <div class="keywords-display"></div>
+                <button onclick="saveDataToLocalStorage()">Save</button> <br>
+                <button class="test" onclick="test()">Test Run</button><br>
+                <button class="createPage" onclick="DownloadPage()">Create HTML file</button>
+                <button class="Clear LocalStorage" onclick="clearLocalStorage()">localStorage.clear()</button>
+            </div>
+
+            <div class="date">
+                <label for="date">Date:</label> <br>
+                <input type="date" class="date-input" style="width: fit-content;">
+                <button onclick="clearInput(event, this)">Clear</button>
+            </div>
+
+            <div class="heading-title">
+                <label for="title">Title/Heading:</label> <br>
+                <input type="text" class="heading-title-input" placeholder="What's the title of your article?">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Create a catchy, descriptive, and keyword-rich title that accurately reflects the content of your post.
+                </p>
+            </div>
+
+            <div class="category-div">
+                <label for="category">Select Category:</label> <br>
+                <select class="category-input" onchange="updateInputValue(this)">
+                  <option value="ALL">ALL</option>
+                  <option value="LITERATURE">LITERATURE</option>
+                  <option value="CULTURE & HERITAGE">CULTURE & HERITAGE</option>
+                  <option value="TECHNOLOGY & INNOVATION">TECHNOLOGY & INNOVATION</option>
+                  <option value="POLITICS & CURRENT EVENTS">POLITICS & CURRENT EVENTS</option>
+                </select>
+            </div>
+
+            <div class="filename-div">
+                <label for="filename">File Name:</label><br>
+                <input type="text" class="filename" placeholder="Name article .txt file">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Include relevant keywords from your title and use hyphens (-) to separate words in the name.
+                </p>
+            </div>
+
+            <div class="introduction-div">
+                <label for="introduction">Introduction/Description/Synopsis:</label><br>
+                <input type="text" class="introduction" placeholder="Write an introduction">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Clearly state the purpose/main idea of the post, using relevant keywords, in a compelling manner that grabs attention. 
+                </p>
+            </div>
+
+            <div class="article">
+                <label for="article">Article Content:</label>
+                <textarea type="text" class="article-body" placeholder="Write your article"></textarea><br>
+                <button onclick="clearArticle(event)">Clear</button>
+                <p class="required">
+                    <ul class="checklist">
+                        <li onclick="toggleCheck(this)">Incorporate relevant keywords naturally throughout the text.</li>
+                        <li onclick="toggleCheck(this)">Divide content into different sections wrapped in &lt;section&gt;.</li>
+                        <li onclick="toggleCheck(this)">Give those sections headings and subheadings (h2 onwards).</li>
+                        <li onclick="toggleCheck(this)">Break your content into easily readable, focused, informative and concised paragraphs wrapped in &lt;p&gt;.</li>
+                        <li onclick="toggleCheck(this)">Use formatting options like bold, italics, and bullet points to emphasize key points or lists.</li>
+                        <li onclick="toggleCheck(this)">Include atleast 5 internal links to other related articles or pages on your website.</li>
+                        <li onclick="toggleCheck(this)">Incorporate atleast 5 external links to reputable sources that provide additional value or support your claims.</li>
+                        <li onclick="toggleCheck(this)">Maintain a logical flow and structure within your content.</li>
+                    </ul>                      
+                </p>
+            </div>
+
+            <div class="coverImageFilePath">
+                <label for="imageFile">Image File Path:</label><br>
+                <input type="text" class="image-filepath" placeholder="File path of your cover image">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Make sure your saved image has captions and relevant keywords in it's filename
+                </p>
+            </div>
+
+            <div class="altText">
+                <label for="altText">Alt Text for Cover Image:</label><br>
+                <input type="text" class="image-alt-txt" placeholder="Alt text for your cover image">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Add a descriptive alt tag to your cover image for accessibility and SEO benefits.
+                </p>
+            </div>
+
+            <div class="meta-description-div">
+                <label for="meta-description">Meta Description:</label><br>
+                <input type="text" class="meta-description" placeholder="Give the meta description for your article">
+                <button onclick="clearInput(event, this)">Clear</button>
+                <p class="required">
+                    *Write a concise and engaging meta description that summarizes your post including relevant keywords. <br>
+                    *Keep the meta description under the recommended length to avoid truncation in search engine results.
+                </p>
+            </div>
+
+            <p class="required" style="font-size: 18px; font-weight: bold;">Object:</p>
+            <div class="object"></div>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>Developed by <a href="wwwd.vercel.app" target="_blank" rel="noopener noreferrer">Wania</a>. All rights reserved.</p>
+        <p>© 2023 me uncensored LLC</p>
+    </footer>
+
+</body>
+</html>

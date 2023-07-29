@@ -1,0 +1,91 @@
+form {
+    margin: 0px auto;
+    /* border: 1px solid #000000; */
+    width: 90%;
+}
+form, input, textarea {
+    font-family: Pathway Extreme;
+}
+
+label{padding: 5px 0px; font-size: 22px;}
+
+input, textarea{width: 90%; border: none; display: inline; font-size: 15px; margin: 5px 0px;}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+button{
+    display: inline;
+}
+.required{
+    font-size: 13px; padding: 0; margin: 0;
+}
+form div{
+    margin: 20px 0px;
+}
+.article-body{
+    border: 1px solid black!important;
+    padding: 5px;
+    min-height: 300px;
+}
+/* article body checklist */
+.checklist {
+    list-style-type: none;
+    padding-left: 0px;
+    width: fit-content;
+    font-size: 13px;
+}
+  
+.checklist li {
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    cursor: pointer;
+}
+  
+.checklist li.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+/* keywords sidebar */
+.meta-keywords-div{
+    /* border: 1px solid blue; */
+    width: 200px;
+    position: fixed;
+    left: 10px;
+}
+.meta-keywords-div label {
+    font-size: 18px;
+}
+.keyword{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px; margin: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+}
+.cross{
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+button{
+    margin: 10px 0;
+    padding: 5px;
+    background: rgb(242, 86, 118);
+    outline: none;
+    border: none;
+    box-shadow: 4px 4px 3px #888888;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    box-shadow: 0px 0px 2px #888888;
+    background-color: crimson;
+}
