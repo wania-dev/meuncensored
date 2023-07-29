@@ -12,7 +12,6 @@ body{
     font-family: Abril Fatface;
     font-size: 50px;
 }
-
 .category-display{
     font-family: Pathway Extreme;
     font-size: 15px;
@@ -90,11 +89,11 @@ p{
 
     .heading{font-size: 25px;}
 
-    .category-display, .introduction{font-size: 14px;}
+    .category-display, .introduction{font-size: 12px;}
 
-    .date{font-size: 12px;}
+    .date{font-size: 11px;}
 
-    .article{font-size: 15px;}
+    .article{font-size: 13px;}
 }
 /* social media sharing */
 .fa {
