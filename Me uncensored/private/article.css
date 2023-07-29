@@ -14,7 +14,7 @@ body{
 }
 .category-display{
     font-family: Pathway Extreme;
-    font-size: 15px;
+    font-size: 12px;
     /* font-weight: bold; */
     /* border: 1px dotted orange; */
     padding: 10px 0px;
@@ -26,7 +26,7 @@ body{
     color: black;
     margin: 10px 0;
 }
-.date{font-size: 14px; color: grey;}
+.date{font-size: 11px; color: grey;}
 
 .coverImage{
     width: 100%;
@@ -36,7 +36,7 @@ body{
 
 .article{
     padding: 10px;
-    font-size: 17px;
+    font-size: 14px;
     color: black;
     font-family: Pathway Extreme;
 }
@@ -80,7 +80,7 @@ p{
     font-family: Pathway Extreme;
 }
 .content p {
-    font-size: 12px;
+    font-size: 11px;
     font-family: Pathway Extreme;
     padding: 0; margin: 0;
 }
