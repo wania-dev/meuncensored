@@ -182,7 +182,7 @@ function createHTMLpage(){
     <body>
     <div class="wrapper">
         <nav>
-            <a href="/public/public.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
+            <a href="/index.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
         </nav>
         <p class="category-display">${category}</p>
         <h1 class="heading">${titleHeading}</h1>
