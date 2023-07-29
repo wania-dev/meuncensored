@@ -85,14 +85,10 @@ p{
     padding: 0; margin: 0;
 }
 
-@media (max-width: 500px){
-
+@media (max-width: 400px){
     .heading{font-size: 25px;}
-
     .category-display, .introduction{font-size: 12px;}
-
     .date{font-size: 11px;}
-
     .article{font-size: 13px;}
 }
 /* social media sharing */
