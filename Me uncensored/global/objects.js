@@ -1,5 +1,14 @@
 let Posts = [
     {
+        heading: "How to watch Aangan HUM TV?",
+        description: "Amidst a chilling winter's eve, a timeless drama unfolds, unraveling passion, rebellion, abuse, and empowerment. Enter the riveting world of Aangan.",
+        date: "2023-07-29",
+        coverImage: "https://www.masala.com/cloud/2021/08/01/MTkgvG3S-aangan.jpg-2-1200x675.jpg",
+        filePath: "How-to-watch-Aangan-2018-HUM-TV)-TV-series-of-the-month-1.html",
+        category: "CULTURE & HERITAGE",
+    }
+    ,
+    {
         heading: "Women in cinema & Diverse Cinematic Narratives!",
         description: "Are 'Item Numbers' icons of feminism or products of the patriarchy?",
         date: "2023-07-03",
