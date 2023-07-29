@@ -1,6 +1,6 @@
 let Posts = [
     {
-        heading: "How to watch Aangan HUM TV?",
+        heading: "How to watch Aangan HUM TV Drama?",
         description: "Amidst a chilling winter's eve, a timeless drama unfolds, unraveling passion, rebellion, abuse, and empowerment. Enter the riveting world of Aangan.",
         date: "2023-07-29",
         coverImage: "https://www.masala.com/cloud/2021/08/01/MTkgvG3S-aangan.jpg-2-1200x675.jpg",
