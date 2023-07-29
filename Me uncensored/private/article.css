@@ -86,7 +86,7 @@ p{
 }
 
 @media (max-width: 500px){
-    .heading{font-size: 25px;}
+    .heading{font-size: 25px; font-family: Yeseva One;}
     .category-display, .introduction{font-size: 14px;}
     .date{font-size: 12px;}
     .article{font-size: 15px;}
