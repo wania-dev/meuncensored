@@ -15,7 +15,7 @@ function recommended() {
   const filteredPosts = Posts.filter((post) => post.category === category);
 
   // Get the first three posts from the filtered array
-  const recommendedPosts = filteredPosts.slice(1, 4);
+  const recommendedPosts = filteredPosts.slice(0, 3);
 
   let recommendedHTML = ''; // Initialize an empty string to store the HTML markup
 
