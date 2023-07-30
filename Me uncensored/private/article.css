@@ -14,7 +14,7 @@ body{
 }
 .category-display{
     font-family: Pathway Extreme;
-    font-size: 12px;
+    font-size: 15px;
     /* font-weight: bold; */
     /* border: 1px dotted orange; */
     padding: 10px 0px;
@@ -27,8 +27,8 @@ body{
     margin: 10px 0;
 }
 
-.introduction{font-size: 13px}
-.date{font-size: 11px; color: grey;}
+.introduction{font-size: 15px}
+.date{font-size: 14px; color: grey;}
 
 .coverImage{
     width: 100%;
@@ -38,7 +38,7 @@ body{
 
 .article{
     padding: 10px;
-    font-size: 14px;
+    font-size: 15px;
     color: black;
     font-family: Pathway Extreme;
 }
