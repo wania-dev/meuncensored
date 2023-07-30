@@ -49,16 +49,27 @@
                 </p>
             </div>
 
-            <div class="category-div">
+             <!-- <div class="category-div">
                 <label for="category">Select Category:</label> <br>
                 <select class="category-input" onchange="updateInputValue(this)">
                   <option value="ALL">ALL</option>
                   <option value="LITERATURE">LITERATURE</option>
                   <option value="CULTURE & HERITAGE">CULTURE & HERITAGE</option>
                   <option value="TECHNOLOGY & INNOVATION">TECHNOLOGY & INNOVATION</option>
-                  <option value="POLITICS & CURRENT EVENTS">POLITICS & CURRENT EVENTS</option>
                 </select>
-            </div>
+            </div>        -->
+            <div class="category-div">
+                <label for="category">Enter Categories (comma-separated):</label><br>
+                <input type="text" class="category-input" id="customCategories">
+                <select class="category-dropdown" id="dropdownCategories">
+                  <option value="ALL">ALL</option>
+                  <option value="LITERATURE">LITERATURE</option>
+                  <option value="CULTURE & HERITAGE">CULTURE & HERITAGE</option>
+                  <option value="TECHNOLOGY & INNOVATION">TECHNOLOGY & INNOVATION</option>
+                </select>
+                <button onclick="addCategory()">Add Category</button>
+                <button onclick="clearCategories()">Clear</button>
+            </div>              
 
             <div class="filename-div">
                 <label for="filename">File Name:</label><br>
