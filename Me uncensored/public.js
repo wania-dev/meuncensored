@@ -1,3 +1,4 @@
+// original version
 let blogContainer = document.querySelector('.blogContainer');
 let mainBlog = document.querySelector('.mainBlog');
 let categoryClicked
@@ -7,10 +8,20 @@ function displayPosts(startIndex, category) {
     blogContainer.innerHTML = '';
     mainBlog.innerHTML = '';
     categoryClicked = category
+    // categoryforfiltering = [category]
   
     // Filter the posts based on the category
-    let filteredPosts = (category === 'all') ? Posts : Posts.filter(post => post.category === category);
-     // Remove the active class from all buttons
+    let filteredPosts = (category === 'all')
+  ? Posts
+  : Posts.filter(post => {
+      if (Array.isArray(post.category)) {
+        return post.category.includes(category);
+      } else {
+        return post.category === category;
+      }
+    });
+
+    // Remove the active class from all buttons
   const buttons = document.querySelectorAll('.button-category button');
   buttons.forEach(button => button.classList.remove('active'));
 
