@@ -32,13 +32,39 @@ function toggleCheck(item) {
 }
 
 // category selection
-function updateInputValue(selectElement) {
-    const selectedOption = selectElement.value;
-    const inputElement = selectElement.previousElementSibling;
+// function updateInputValue(selectElement) {
+//     const selectedOption = selectElement.value;
+//     const inputElement = selectElement.previousElementSibling;
   
-    inputElement.value = selectedOption;
-}
-
+//     inputElement.value = selectedOption;
+// }
+function addCategory() {
+    const customInput = document.getElementById('customCategories');
+    const dropdown = document.getElementById('dropdownCategories');
+    const selectedOption = dropdown.value;
+  
+    // Append the selected option to the custom input field
+    if (customInput.value.trim() === '') {
+      customInput.value = selectedOption;
+    } else {
+      customInput.value += ', ' + selectedOption;
+    }
+  }
+  
+  function clearCategories() {
+    const customInput = document.getElementById('customCategories');
+    customInput.value = '';
+  }
+  
+  function updateSelectedCategories() {
+    const customInput = document.getElementById('customCategories');
+    const enteredCategories = customInput.value.split(',').map(category => category.trim());
+  
+    // Save the entered categories to localStorage as an array
+    localStorage.setItem('selectedCategories', JSON.stringify(enteredCategories));
+  }
+  
+  
 function addKeywords(event) {
     event.preventDefault(); // Prevent the default button behavior
   
@@ -144,21 +170,9 @@ function createHTMLpage(){
     let metaDescription = localStorage.getItem('metaDescription');
     let keywords = document.querySelectorAll('.keyword')
 
-    // Create an empty array to store the extracted keywords
-    let keywordsList = [];
-
-    // Loop through the elements with the class "keyword" and extract the keyword text from each span element
-    keywords.forEach(keywordElement => {
-        let keywordText = keywordElement.textContent;
-
-        // Remove the "close" icon (✕) from the keyword text
-        keywordText = keywordText.replace(/✕/g, "").trim();
-
-        // Add the cleaned keyword to the list
-        if (keywordText !== "") {
-            keywordsList.push(keywordText);
-        }
-    });
+    // Convert NodeList to an array and extract the keywords from each element
+    let keywordArray = Array.from(keywords);
+    let keywordsList = keywordArray.map(keywordElement => keywordElement.textContent);
 
     // Join the keywords into a single string with commas separating them
     let keywordString = keywordsList.join(", ");
@@ -182,7 +196,7 @@ function createHTMLpage(){
     <body>
     <div class="wrapper">
         <nav>
-            <a href="/index.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
+            <a href="/public/public.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
         </nav>
         <p class="category-display">${category}</p>
         <h1 class="heading">${titleHeading}</h1>
@@ -257,19 +271,26 @@ function createAndDisplayObject() {
     let introduction = localStorage.getItem('introduction');
     let imageFilepath = localStorage.getItem('imageFilepath');
   
+    // Convert category to an array if it contains multiple categories
+    let categoryArray = category ? category.split(',').map(cat => cat.trim()) : null;
+  
+    // Format category as a string representation with square brackets for an array
+    const formattedCategory = categoryArray ? `[${categoryArray.map(cat => `"${cat}"`).join(', ')}]` : `"${category}"`;
+  
     // Display the object in the container
-  let container = document.querySelector('.object');
-  container.innerHTML = `
-        {<br>
-            heading: "${titleHeading}", <br>
-            description: "${introduction}",<br>
-            date: "${date}",<br>
-            coverImage: "${imageFilepath}",<br>
-            filePath: "${fileName}.htm",<br>
-            category: "${category}",<br>
-        }
-  `
-}
+    let container = document.querySelector('.object');
+    container.innerHTML = `
+      {<br>
+        heading: "${titleHeading}",<br>
+        description: "${introduction}",<br>
+        date: "${date}",<br>
+        coverImage: "${imageFilepath}",<br>
+        filePath: "${fileName}.htm",<br>
+        category: ${formattedCategory},<br>
+      }
+    `;
+}   
+
 function clearLocalStorage(){
     localStorage.clear()
 }
