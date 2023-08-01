@@ -21,13 +21,6 @@
         <form action="article">
 
             <div class="meta-keywords-div">
-                <label for="keywords">Keywords for article:</label> <br>
-                <button onclick="addKeywords(event)">Add Keywords</button> <br>
-                <p class="required">
-                    *Conduct keyword research to identify relevant keywords for your article. <br><br>
-                    *Avoid keyword stuffing and maintain a balanced keyword density.
-                </p>
-                <div class="keywords-display"></div>
                 <button onclick="saveDataToLocalStorage()">Save</button> <br>
                 <button class="test" onclick="test()">Test Run</button><br>
                 <button class="createPage" onclick="DownloadPage()">Create HTML file</button>
@@ -134,6 +127,14 @@
                     *Keep the meta description under the recommended length to avoid truncation in search engine results.
                 </p>
             </div>
+            
+             <label for="keywords">Keywords for article:</label> <br>
+                <button onclick="addKeywords(event)">Add Keywords</button> <br>
+                <p class="required">
+                    *Conduct keyword research to identify relevant keywords for your article. <br><br>
+                    *Avoid keyword stuffing and maintain a balanced keyword density.
+                </p>
+                <div class="keywords-display"></div>
 
             <p class="required" style="font-size: 18px; font-weight: bold;">Object:</p>
             <div class="object"></div>
