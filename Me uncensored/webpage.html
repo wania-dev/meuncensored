@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wania | Me Uncensored</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .business {
+            background-color: #e74c3c;
+        }
+
+        .personal {
+            background-color: #2ecc71;
+        }
+
+        .email-container {
+            margin-top: 30px;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .animation-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wania | Me Uncensored</h1>
+    <p>Welcome to my personal webpage! Here you can find out more about me, and feel free to reach out to me by email.</p>
+
+    <div class="animation-container">
+        <div class="animation-text">Email me now!</div>
+    </div>
+
+    <div class="email-container">
+        <a class="email-link business" href="#" onclick="openModal('Business Inquiry')">Business</a>
+        <a class="email-link personal" href="#" onclick="openModal('Personal Inquiry')">Personal</a>
+    </div>
+
+    <!-- Modal -->
+    <div id="emailModal" style="display: none;">
+        <h2 id="modalHeading"></h2>
+        <input type="text" id="modalSubject" style="width: 100%;" placeholder="Enter your subject">
+        <textarea id="modalMessage" rows="4" style="width: 100%;" placeholder="Write your message..."></textarea>
+        <button onclick="sendEmail()">Send</button>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+
+    <h2>About Me</h2>
+    <p>
+        (Insert your bio and other relevant details here.)
+    </p>
+
+    <script>
+        function openModal(type) {
+            const modal = document.getElementById('emailModal');
+            const modalHeading = document.getElementById('modalHeading');
+            const modalSubject = document.getElementById('modalSubject');
+            const modalMessage = document.getElementById('modalMessage');
+
+            modalHeading.innerText = type === 'Business Inquiry' ? 'BUSINESS' : 'PERSONAL';
+            modalSubject.value = type;
+            modalMessage.value = '';
+
+            modal.style.display = 'block';
+        }
+
+        function sendEmail() {
+            const modalSubject = document.getElementById('modalSubject').value;
+            const modalMessage = document.getElementById('modalMessage').value;
+            const recipientEmail = 'my.waniafaisal@gmail.com';
+
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(modalSubject)}&body=${encodeURIComponent(modalMessage)}`;
+            window.location.href = mailtoLink;
+
+            closeModal();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('emailModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
