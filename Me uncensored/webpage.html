@@ -70,13 +70,14 @@
     </div>
 
     <div class="email-container">
-        <a class="email-link business" href="#" onclick="openModal('Business Inquiry')">Business</a>
-        <a class="email-link personal" href="#" onclick="openModal('Personal Inquiry')">Personal</a>
+        <a class="email-link business" href="mailto:my.waniafaisal@gmail.com?subject=Business Inquiry">Business</a>
+        <a class="email-link personal" href="mailto:my.waniafaisal@gmail.com?subject=Personal Inquiry">Personal</a>
     </div>
 
     <!-- Modal -->
     <div id="emailModal" style="display: none;">
         <h2 id="modalHeading"></h2>
+        <input type="email" id="senderEmail" style="width: 100%;" placeholder="Your Email Address">
         <input type="text" id="modalSubject" style="width: 100%;" placeholder="Enter your subject">
         <textarea id="modalMessage" rows="4" style="width: 100%;" placeholder="Write your message..."></textarea>
         <button onclick="sendEmail()">Send</button>
@@ -103,14 +104,29 @@
         }
 
         function sendEmail() {
+            const senderEmail = document.getElementById('senderEmail').value;
             const modalSubject = document.getElementById('modalSubject').value;
             const modalMessage = document.getElementById('modalMessage').value;
-            const recipientEmail = 'my.waniafaisal@gmail.com';
 
-            const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(modalSubject)}&body=${encodeURIComponent(modalMessage)}`;
-            window.location.href = mailtoLink;
+            const formData = new FormData();
+            formData.append('email', senderEmail);
+            formData.append('subject', modalSubject);
+            formData.append('message', modalMessage);
 
-            closeModal();
+            fetch('https://formspree.io/f/mzbybwyk', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                },
+                body: formData,
+            }).then(() => {
+                alert('Email sent successfully!');
+                closeModal();
+            }).catch((error) => {
+                alert('An error occurred while sending the email. Please try again later.');
+                console.error(error);
+                closeModal();
+            });
         }
 
         function closeModal() {
