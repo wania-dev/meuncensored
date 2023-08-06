@@ -1,3 +1,4 @@
+alert('Hey everyone! I am Wania and this is the first commercial project ive made in 2023. I had a blast (of stress) coding this but it is DONE!!! ill be adding more features to it gradually, and ill be writing about the books i read, my perspective on culture, history and tech')
 // original version
 let blogContainer = document.querySelector('.blogContainer');
 let mainBlog = document.querySelector('.mainBlog');
