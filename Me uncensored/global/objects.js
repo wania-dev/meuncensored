@@ -1,6 +1,6 @@
 let Posts = [
     {
-heading: "Unboxing Barbie — A Personal Reflection",
+heading: "Unboxing Barbie: A Personal Reflection",
 description: "What about the static nature of Barbie makes her the perfect woman? What makes perfectionism so enticing? What does the pursuit of perfectionism entail?",
 date: "2023-08-01",
 coverImage: "https://assets.teenvogue.com/photos/6449533733b9199ea36a5973/16:9/w_2240,c_limit/rev-1-BARBIE-TP-0002_High_Res_JPEG.jpeg",
