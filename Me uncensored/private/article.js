@@ -7,42 +7,6 @@ buttons.forEach(function(button) {
   });
 });
 
-// function recommended() {
-//   // Get the category from the element with class "category-display"
-//   const category = document.querySelector('.category-display').textContent.trim();
-
-//   // Filter the posts array based on the category
-//   const filteredPosts = Posts.filter((post) => post.category === category);
-
-//   // Get the first three posts from the filtered array
-//   const recommendedPosts = filteredPosts.slice(0, 4);
-
-//   let recommendedHTML = ''; // Initialize an empty string to store the HTML markup
-
-//   // Iterate over the recommended posts
-//   recommendedPosts.forEach((post) => {
-//     // Generate the HTML markup for each post
-//     let postHTML = `
-//       <a href="${post.filePath}" target="_blank">
-//         <div class="blog-card">
-//           <img src="${post.coverImage}" alt="Cover Image">
-//           <div class="content">
-//             <h2>${post.heading}</h2>
-//             <p>${post.description}</p>
-//           </div>
-//         </div>
-//       </a>
-//     `;
-
-//     recommendedHTML += postHTML; // Append the post HTML to the recommendedHTML string
-//   });
-
-//   let recommendedContainer = document.querySelector('.recommended');
-//   recommendedContainer.innerHTML = recommendedHTML; // Set the generated HTML as the content of the .recommended element
-// }
-
-// recommended();
-
 function recommended() {
   // Get the category from the element with class "category-display"
   const category = document.querySelector('.category-display').textContent.trim();
@@ -51,7 +15,7 @@ function recommended() {
   const filteredPosts = Posts.filter((post) => post.category === category);
 
   // Get the first three posts from the filtered array
-  const recommendedPosts = filteredPosts.slice(0, 3); // Change the slice to 3
+  const recommendedPosts = filteredPosts.slice(0, 3);
 
   let recommendedHTML = ''; // Initialize an empty string to store the HTML markup
 
