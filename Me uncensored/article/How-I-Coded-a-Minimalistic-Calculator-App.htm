@@ -1,0 +1,394 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>How I Coded a Minimalistic Calculator App</title>
+        <meta name="description" content="Explore my step-by-step guide to modular calculator development, embracing clean code practices, user-centered design, JavaScript, HTML, and CSS. Learn how to create a minimalist calculator with timeless appeal and adaptability to user preferences.">
+        <meta name="keywords" content="Modular-Calculator✕, Clean-Code✕, User-Centered-Design✕, JavaScript-Development✕, Minimalist-UI✕, HTML✕, CSS✕, Code-Organization✕, User-Experience-(UX)✕, Web-Development-Best-Practices✕">
+        <link rel="shortcut icon" href="/multimedia/MU.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/private/article.css">
+        <link rel="stylesheet" href="/global/fontFamily.css">
+        <link rel="stylesheet" href="/global/navBar, footer, scrollbar.css">
+        <script src="/private/article.js" defer></script>
+        <script src="/global/objects.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <div class="wrapper">
+        <nav>
+            <a href="/public/public.html" target="_blank" rel="noopener noreferrer">me uncensored</a>
+        </nav>
+        <p class="category-display">TECHNOLOGY & INNOVATION</p>
+        <h1 class="heading">How I Coded a Minimalistic Calculator App</h1>
+        <header class="introduction">Embracing Clean Code: A Modular Calculator Development Guide Using JavaScript</header>
+        <p class="date">2023-09-03</p>
+        <img class="coverImage" src="https://wwwd.vercel.app/media/0C9E0BD2-2087-431C-A4B2-75DFE87F7DD6.jpeg" alt="End result of the app">
+
+        <div class="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <article class="article">
+            <p>It’s been 16 days since I last wrote a line of code. In code-verse, that’s equivalent to a lifetime. And you know what happens when you don’t practice something for a lifetime?</p>
+        <p>You forget how to do it.</p>
+        <p>Which is exactly what has happened to me. Hence my efforts to, gradually over the course of this week, resolve myself of a lifetime of ignorance and get back in the shed.</p>
+        <p>It’s currently 4.31 AM in the morning, aka the time I usually finish my coding session. Or used to.</p>
+        <p>I have been at this damn calculator app for three hours now. I wouldn’t say that I don't know how to make it. I just want to get it right. Perfect.</p>
+        <p>And now that I’m finished with it, I’m satisfied.</p>
+        <p>But while I was making it, I kept taking notes because I tried to implement some new concepts that I didn’t exactly understand completely. Hence, I thought if I documented every approach along the way I might create something sophisticated.</p>
+        <p>And sophisticated I did make.</p>
+        <p>For those of you who don’t know, sophisticated code is one that is efficient, readable, and can be easily maintained, and it does all of it by using advanced concepts. In the case of JavaScript, that often entails:</p>
+        <ul>
+            <li>Use of Event Delegation: Instead of adding click event listeners to each individual button, you can use event delegation to handle all button clicks in one place. This reduces repetitive code and makes it easier to add or remove buttons in the future.</li><br>
+            <li>Avoid Inline JavaScript: Remove inline JavaScript in your HTML. It's better to separate your JavaScript from your HTML for better maintainability.</li><br>
+            <li>Use of More Meaningful Function Names: More explicit function names make your code more self-explanatory.</li><br>
+            <li>Validation checks: Add validation checks to prevent unnecessary actions.</li><br>
+            <li>Using ES6 Arrow Functions: If you're comfortable with ES6 syntax, you can use arrow functions for brevity.</li><br>
+            <li>Separation of Concerns: Consider separating your code into multiple files (modules) if it becomes more complex. This can help you organize and maintain your code better.</li><br>
+            <li>Comments and Documentation: Add comments to explain the purpose of functions and any complex logic, especially if someone else (or future you) needs to understand or modify the code.</li>
+        </ul>
+        <p>So we are going build a calculator app that is sophisticated and chic not only in its design but also in its functionality based on all of the above principles.</p>
+
+<section>
+        <h3>Step 1: Figure out the basic logic that goes behind every part of the calculator.</h3>
+        <p>For me, this is the lengthiest part, and it’s a personal step. Not many people choose to do this. They go ahead and write the whole code (that is much more efficient than the one I’m going to write in this step) in one go. Since I’m brushing up on my skills, I’ll try to do the job in the simplest way possible using the most basic syntax and then go from there.</p>
+        <p>First things first, let's set up the basic HTML structure. Nothing fancy, just the groundwork:</p>
+<pre><code style="width: 60%; overflow-x: scroll;">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Calculator App&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;script src="main.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+<p>
+    Inside our container, we'll create two essential elements: one for the screen and one for the keys:
+</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+&lt;div class="calculator"&gt;
+    &lt;div class="screen"&gt;&lt;/div&gt;
+    &lt;div class="keys"&gt;
+        &lt;!-- where the calculator keys will go --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>
+    Now we're creating key sections for our calculator. Each section represents a row of buttons, but I’m using <code>&lt;div&gt;</code> tags because I find them less problematic. These sections include numbers 1 to 9 and operators like +, -, x, ÷, =, del (delete), and clear. It's a clean and organized layout for our calculator interface.
+</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+&lt;div class="section"&gt;
+    &lt;div class="n"&gt;1&lt;/div&gt;
+    &lt;div class="n"&gt;2&lt;/div&gt;
+    &lt;div class="n"&gt;3&lt;/div&gt;
+    &lt;div class="s"&gt;+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section"&gt;
+    &lt;div class="n"&gt;4&lt;/div&gt;
+    &lt;div class="n"&gt;5&lt;/div&gt;
+    &lt;div class="n"&gt;6&lt;/div&gt;
+    &lt;div class="s"&gt;-&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section"&gt;
+    &lt;div class="n"&gt;7&lt;/div&gt;
+    &lt;div class="n"&gt;8&lt;/div&gt;
+    &lt;div class="n"&gt;9&lt;/div&gt;
+    &lt;div class="s"&gt;x&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section"&gt;
+    &lt;div class="s"&gt;÷&lt;/div&gt;
+    &lt;div class="n"&gt;0&lt;/div&gt;
+    &lt;div class="s"&gt;=&lt;/div&gt;
+    &lt;div class="s"&gt;del&lt;/div&gt;
+    &lt;div class="s"&gt;clear&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>
+    We've styled the <code>sections</code>, <code>n</code>, and <code>s</code> classes to display buttons in a row.
+</p>
+
+<p>
+    To make numbers appear on the screen when clicked, I've created a simple function, <code>numKeyClicked()</code>, which takes the clicked key and updates the screen with it:
+</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+function numKeyClicked(keyElement){
+    let screen = document.querySelector('.screen').innerHTML
+    let key = keyElement.innerText
+    document.querySelector('.screen').innerHTML = screen + key
+}
+</code></pre>
+
+<p>
+    We go ahead and include this function on every HTML key line using inline JS, e.g.:
+</p>
+
+<pre><code  style="width: 60%; overflow-x: scroll;">
+&lt;div class="section"&gt;
+    &lt;div class="n" onclick="numKeyClicked(this)"&gt;1&lt;/div&gt;
+    &lt;div class="n" onclick="numKeyClicked(this)"&gt;2&lt;/div&gt;
+    &lt;div class="n" onclick="numKeyClicked(this)"&gt;3&lt;/div&gt;
+    &lt;div class="s"&gt;+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- add it to other functions as well --&gt;
+</code></pre>
+
+<p>
+    Now that we’re done with numbers, what about the arithmetic signs?
+</p>
+
+<p>
+    In handling arithmetic signs, we've created a function called <code>signKeyClicked()</code>:
+</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+function signKeyClicked(keyElement) {
+    let sign = keyElement.innerText
+    let screen = document.querySelector('.screen').innerHTML
+    if (!(sign == "=")){
+        screen = document.querySelector('.screen').innerHTML = screen + sign
+    }
+}
+</code></pre>
+<p>Now we go ahead and call that function to every HTML sign expression:</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;+&lt;/div&gt;
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;-&lt;/div&gt;
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;x&lt;/div&gt;
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;=&lt;/div&gt;
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;÷&lt;/div&gt;
+</code></pre>
+
+<p>Now for the “=” sign, I want the calculator to display the answer every time I click on the damn thing. I need it to do the desirable error handling as well.</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+switch (sign) {
+    case "=":
+        // to replace "x" with * and "÷" with / when evaluating the answer
+        let sanitizedScreen = screen.replace(/x/g, '*').replace(/÷/g, '/');
+        try {
+            // Evaluate the sanitized expression
+            let answer = eval(sanitizedScreen);
+            
+            // Check if the answer is a finite number (not Infinity or NaN)
+            if (isFinite(answer)) {
+                document.querySelector('.screen').innerHTML = answer;
+            } else {
+                // Handle the case where the answer is not a valid number
+                document.querySelector('.screen').innerHTML = "Error";
+            }
+        } catch (error) {
+            // Handle any evaluation errors
+            document.querySelector('.screen').innerHTML = "Error";
+        }
+        break;
+}
+</code></pre>
+
+<p>For the equals (=) sign functionality, we've implemented a switch statement to handle it. Here's a breakdown:</p>
+
+<ul>
+    <li>We replace "x" with "*" and "÷" with "/" for evaluation, keeping the user-friendly input intact.</li>
+    <li>We use the <code>eval()</code> function to calculate the expression stored in <code>sanitizedScreen</code>, which represents the input.</li>
+    <li>We check if the answer is a valid finite number (not Infinity or NaN).</li>
+    <li>If the answer is valid, it's displayed on the screen.</li>
+    <li>If the answer is not a valid number, we handle it as an error by displaying "Error."</li>
+    <li>Additionally, we catch and handle any evaluation errors that may occur during the process.</li>
+</ul>
+
+<p>This code ensures that the calculator displays results accurately and handles potential errors gracefully.</p>
+
+<p>Now the only thing left is the clear and delete buttons. Or <code>div</code> tags.</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+function del(){
+    let screen = document.querySelector('.screen').innerHTML
+    let newscreen = screen.slice(0,-1);
+    document.querySelector('.screen').innerHTML = newscreen;
+}
+function clearScreen() {
+    // Get the screen element by its class or ID
+    let screenElement = document.querySelector('.screen'); // Replace with the appropriate selector
+    // Clear the screen by setting its content to an empty string
+    screenElement.innerHTML = '';
+}
+// Attach the clearScreen function to the click event of the screen element
+let screenElement = document.querySelector('.screen'); // Replace with the appropriate selector
+screenElement.addEventListener('click', clearScreen);
+</code></pre>
+</section> <br> <br>
+<section>
+  <h3>Step 2: Now we are going to write sophisticated code.</h3>
+
+<p>I will be transitioning my code into a modular structure to improve code organization, readability, and maintainability, and avoid naming collisions while adhering to best practices and minimizing global variables.</p>
+
+<p><strong>Namespacing</strong> is a technique that is used to avoid naming collisions in our programs.</p>
+
+<p>There is nothing new in the code below, most of the code is the same as that of before, the only difference being that it is better adapted to the module pattern. The logic is the same. The syntax is similar.</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+const Calculator = () => {
+    let screen = document.querySelector('.screen')
+    
+    const inputKey = (element) => {
+        let key = element.innerHTML
+        appendToScreen(key)
+    }
+    const appendToScreen = (key) => {
+        if (!(key == "=" || key == "del")){
+            screen.textContent += key;
+        } else {
+            let sanitizedScreen = screen.textContent.replace(/x/g, '*').replace(/÷/g, '/');
+            try {
+                // Evaluate the sanitized expression
+                let answer = eval(sanitizedScreen);
+                
+                // Check if the answer is a finite number (not Infinity or NaN)
+                if (isFinite(answer)) {
+                  screen.innerHTML = answer;
+                } else {
+                  // Handle the case where the answer is not a valid number
+                  screen.innerHTML = "Error";
+                }
+              } catch (error) {
+                // Handle any evaluation errors
+                screen.innerHTML = "Error";
+              }
+        }
+    }
+    const clearScreen = () => {
+        screen.textContent = "";
+    }
+    const deleteLastCharacter = () => {
+        if (!(screen.textContent == "")){
+            let newScreenText = screen.textContent.slice(0, -1);
+            screen.textContent = newScreenText;
+        }
+    }
+    return {
+        inputKey,
+        clearScreen,
+        deleteLastCharacter
+    }
+}
+</code></pre>
+
+<p>Here's a breakdown of the changes:</p>
+
+<ol>
+    <li>We've created a <strong><code>Calculator</code></strong> module using an arrow function, encapsulating our calculator functionality within it.</li><br>
+    <li>The module initializes by getting a reference to the screen element.</li><br>
+    <li>We've defined private functions inside the module for handling various tasks, such as <strong><code>inputKey</code></strong>, <strong><code>appendToScreen</code></strong>, <strong><code>clearScreen</code></strong>, and <strong><code>deleteLastCharacter</code></strong>. These functions help maintain clean code and avoid global scope pollution.</li><br>
+    <li>The <strong><code>appendToScreen</code></strong> function now handles the evaluation of mathematical expressions when the equals (=) key is pressed, ensuring that valid results are displayed, and errors are appropriately handled.</li><br>
+    <li>We've utilized ES6 arrow functions for concise syntax.</li><br>
+    <li>The module pattern enables better namespacing, ensuring that functions within the module don't clash with functions outside it.</li><br>
+    <li>Improved comments and documentation provide a clearer understanding of the code.</li>
+</ol>
+
+<p>Next, we need to make sure our HTML is ready to cope with this new structure. You guessed it right, We’re removing all inline JS.</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+&lt;div class="s" onclick="signKeyClicked(this)"&gt;+&lt;/div&gt;
+&lt;div class="keys"&gt;
+    &lt;div class="screen"&gt;&lt;/div&gt;
+    &lt;div class="section"&gt;
+        &lt;div class="n"&gt;1&lt;/div&gt;
+        &lt;div class="n"&gt;2&lt;/div&gt;
+        &lt;div class="n"&gt;3&lt;/div&gt;
+        &lt;div class="s"&gt;+&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+<!-- remove from the rest too -->
+</code></pre>
+
+<p>Now moving back onto our JS, we need to create a Calculator instance, to be able to use all the private functions. Then we need our keys to be able to access them. This setup allows us to handle user input effectively and perform calculations using our modular <strong><code>Calculator</code></strong> instance.</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+// Create the Calculator instance
+const calculator = Calculator();
+
+// add event listeners to the divs
+const divs = document.querySelectorAll('.n, .s');
+divs.forEach((div) => {
+    div.addEventListener('click', () => {
+        calculator.inputKey(div);
+    });
+});
+</code></pre>
+
+<p>Here is the revised clear and delete functionality:</p>
+
+<pre><code style="width: 60%; overflow-x: scroll;">
+// clear and delete
+const clearDiv = document.querySelector('.s.clear');
+clearDiv.addEventListener('click', calculator.clearScreen);
+
+const deleteDiv = document.querySelector('.s.del');
+deleteDiv.addEventListener('click', calculator.deleteLastCharacter);
+</code></pre>
+
+<p>There we go, we’re almost done. Now comes the last, and the most integral part of my program development: user interfaces (UI) or user experience (UX)</p>
+</p>
+</section>
+<section>
+<h3>Step 3: User-Centered Design</h3>
+
+<p>Now, let's delve into the creative part of our journey - the design. While I scoured the internet for inspiration but I’m that traditional, so I think I’m going stick to minimalism:</p>
+
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpreviews.123rf.com%2Fimages%2Fvasilyrosca%2Fvasilyrosca1908%2Fvasilyrosca190800720%2F128928509-smartphone-calculator-app-interface-mobile-calculator-design-screen-concept-for-device.jpg&tbnid=e-mSFTu6tNZnkM&vet=12ahUKEwjtlL3NwY6BAxXDVKQEHYxwAmwQMygEegQIARB8..i&imgrefurl=https%3A%2F%2Fwww.123rf.com%2Fphoto_128928509_smartphone-calculator-app-interface-mobile-calculator-design-screen-concept-for-device.html&docid=PnqVWhXQd9HIIM&w=1300&h=953&q=calculator%20designs&ved=2ahUKEwjtlL3NwY6BAxXDVKQEHYxwAmwQMygEegQIARB8" alt="Untitled">
+
+<p>Minimalism has a timeless appeal, and it aligns perfectly with our calculator's functionality-first approach. Although the possibility of offering different themes to users is enticing.</p>
+
+<p>If you're curious about how I implemented these design ideas, you can explore the CSS code on my GitHub repository <a href="https://github.com/wania-dev/calculator/blob/main/Calculator/style.css">here</a>.</p>
+
+<h3>Conclusion</h3>
+
+<p>Throughout the tutorial, we witnessed the transition from traditional coding practices to a more structured and modular approach. By encapsulating functions and using modules, we achieved cleaner, more maintainable code. We also embraced user-centered design principles, making our calculator not only functional but also visually appealing and adaptable to user preferences.</p>
+
+<p>View the end result <a href="https://calculator-wania-dev.vercel.app/" target="_blank">here</a>.</p>
+
+<p>This is also my first article under the category of Technology & Innovation so I might just take the opportunity to introduce what is to come ahead.</p>
+
+<p>In this category, I'll provide a dynamic perspective on my coding projects, evolving practices, and the ever-changing web development landscape. From exploring novel technologies to mastering new programming languages, I'll share my insights.</p>
+
+<p>Additionally, I'll delve into subjects that genuinely intrigue me, such as climate change technology, the rich history of computer science, and development with a unique focus on my homeland, Pakistan.</p>
+
+<p>I've delved into countless tech articles, yet found myself disengaged by their monotony. Hence, within this blog category, my mission is to captivate and convey technical knowledge to you in a compelling and enthralling manner, ensuring your attention remains unwavering.</p>
+
+<blockquote style="border-left: 5px solid crimson; padding-left: 15px; font-style: italic;">
+    <p>'With great code comes great responsibility.'</p>
+    <p>~ Coder-man: Homecoming</p>
+</blockquote>
+
+
+</section>
+        </article>
+    
+    <div style="font-size: 15px; font-family: pathway extreme; margin: 10px; font-weight: 900;">More from <span style="text-transform: capitalize;">technology & innovation</span></div>
+    <div class="recommended">
+        <!-- three previous objects come here. -->
+    </div>
+</div>
+
+        <footer>
+            <p>Developed by <a href="wwwd.vercel.app" target="_blank" rel="noopener noreferrer">Wania</a>. All rights reserved.</p>
+            <p>© 2023 me uncensored LLC</p>
+        </footer>
+</body>
+</html>
+  
