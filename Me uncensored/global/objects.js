@@ -1,11 +1,20 @@
 let Posts = [
     {
-heading: "Unboxing Barbie: A Personal Reflection",
-description: "What about the static nature of Barbie makes her the perfect woman? What makes perfectionism so enticing? What does the pursuit of perfectionism entail?",
-date: "2023-08-01",
-coverImage: "https://assets.teenvogue.com/photos/6449533733b9199ea36a5973/16:9/w_2240,c_limit/rev-1-BARBIE-TP-0002_High_Res_JPEG.jpeg",
-filePath: "Unboxing-barbie-a-personal-reflection.html",
-category: ["CULTURE & HERITAGE"],
+        heading: "How I Coded a Minimalistic Calculator App",
+        description: "Embracing Clean Code: A Modular Calculator Development Guide Using JavaScript",
+        date: "2023-09-03",
+        coverImage: "https://wwwd.vercel.app/media/0C9E0BD2-2087-431C-A4B2-75DFE87F7DD6.jpeg",
+        filePath: "How-I-Coded-a-Minimalistic-Calculator-App.htm",
+        category: ["TECHNOLOGY & INNOVATION"],
+}
+    ,
+    {
+        heading: "Unboxing Barbie: A Personal Reflection",
+        description: "What about the static nature of Barbie makes her the perfect woman? What makes perfectionism so enticing? What does the pursuit of perfectionism entail?",
+        date: "2023-08-01",
+        coverImage: "https://assets.teenvogue.com/photos/6449533733b9199ea36a5973/16:9/w_2240,c_limit/rev-1-BARBIE-TP-0002_High_Res_JPEG.jpeg",
+        filePath: "Unboxing-barbie-a-personal-reflection.html",
+        category: ["CULTURE & HERITAGE"],
 }
     ,
     {
