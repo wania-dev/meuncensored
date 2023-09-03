@@ -3,7 +3,7 @@ let Posts = [
         heading: "How I Coded a Minimalistic Calculator App",
         description: "Embracing Clean Code: A Modular Calculator Development Guide Using JavaScript",
         date: "2023-09-03",
-        coverImage: "https://wwwd.vercel.app/media/0C9E0BD2-2087-431C-A4B2-75DFE87F7DD6.jpeg",
+        coverImage: "https://i.ytimg.com/vi/GCUz_hjZXfc/maxresdefault.jpg",
         filePath: "How-I-Coded-a-Minimalistic-Calculator-App.htm",
         category: ["TECHNOLOGY & INNOVATION"],
 }
