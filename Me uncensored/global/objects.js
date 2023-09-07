@@ -1,5 +1,14 @@
 let Posts = [
     {
+heading: "The Beating Tell Tale Heart Of Edgar Allan Poe",
+description: "Ernst Lanzer, most infamously known as The Rat Man, cut his own throat with a razor in 1907.",
+date: "2023-09-07",
+coverImage: "/multimedia/3ED2B138-CAEA-4E66-B580-6291DD09BA9A.jpeg",
+filePath: "The-Beating-Tell-Tale-Heart-Of-Edgar-Allan-Poe.htm",
+category: ["LITERATURE"],
+}
+    ,
+    {
         heading: "How I Coded a Minimalistic Calculator App",
         description: "Embracing Clean Code: A Modular Calculator Development Guide Using JavaScript",
         date: "2023-09-03",
