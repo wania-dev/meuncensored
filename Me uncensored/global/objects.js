@@ -1,12 +1,4 @@
 let Posts = [
-             {
-                 heading: 'Zoella is Cowasjee pens secretary',
-                 description: 'wania is dg or ds, we dont know',
-                 date: "2023-09-28",
-                 coverImage: "multimedia/3ED2B138-CAEA-4E66-B580-6291DD09BA9A.jpeg",
-                 filePath: "",
-                 category: "CULTURE & HERITAGE"
-             },
                {
 heading: "The Beating Tell Tale Heart Of Edgar Allan Poe",
 description: "Ernst Lanzer, most infamously known as The Rat Man, cut his own throat with a razor in 1907.",
