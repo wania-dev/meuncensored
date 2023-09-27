@@ -6,7 +6,7 @@ let Posts = [,
                  coverImage: "multimedia/3ED2B138-CAEA-4E66-B580-6291DD09BA9A.jpeg",
                  filePath: ,
                  category: "CULTURE & HERITAGE"
-    {,
+             },
                {
 heading: "The Beating Tell Tale Heart Of Edgar Allan Poe",
 description: "Ernst Lanzer, most infamously known as The Rat Man, cut his own throat with a razor in 1907.",
