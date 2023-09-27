@@ -1,4 +1,4 @@
-let Posts = [,
+let Posts = [
              {
                  heading: 'Zoella is Cowasjee pens secretary',
                  description: 'wania is dg or ds, we dont know',
