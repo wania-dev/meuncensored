@@ -4,7 +4,7 @@ let Posts = [
                  description: 'wania is dg or ds, we dont know',
                  date: "2023-09-28",
                  coverImage: "multimedia/3ED2B138-CAEA-4E66-B580-6291DD09BA9A.jpeg",
-                 filePath: ,
+                 filePath: "",
                  category: "CULTURE & HERITAGE"
              },
                {
