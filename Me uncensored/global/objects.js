@@ -1,4 +1,13 @@
 let Posts = [
+{
+heading: "How to read a book?",
+description: "Based on Mortimer Adler's "How to Read a Book", this article dissects reading like a frog in biology class, along with some personal ranting, roasts, and anecdotes.",
+date: "2023-12-09",
+coverImage: "https://benjaminmcevoy.com/wp-content/uploads/2019/11/how-to-read-a-book-adler-review-scaled.jpg",
+filePath: "How-to-read-a-book.htm",
+category: ["LITERATURE"],
+}
+  ,
                {
 heading: "The Beating Tell Tale Heart Of Edgar Allan Poe",
 description: "Ernst Lanzer, most infamously known as The Rat Man, cut his own throat with a razor in 1907.",
