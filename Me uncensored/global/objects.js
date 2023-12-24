@@ -18,15 +18,6 @@ category: ["LITERATURE"],
 }
     ,
     {
-        heading: "How I Coded a Minimalistic Calculator App",
-        description: "Embracing Clean Code: A Modular Calculator Development Guide Using JavaScript",
-        date: "2023-09-03",
-        coverImage: "https://i.ytimg.com/vi/GCUz_hjZXfc/maxresdefault.jpg",
-        filePath: "How-I-Coded-a-Minimalistic-Calculator-App.htm",
-        category: ["TECHNOLOGY & INNOVATION"],
-}
-    ,
-    {
         heading: "Unboxing Barbie: A Personal Reflection",
         description: "What about the static nature of Barbie makes her the perfect woman? What makes perfectionism so enticing? What does the pursuit of perfectionism entail?",
         date: "2023-08-01",
@@ -34,15 +25,6 @@ category: ["LITERATURE"],
         filePath: "Unboxing-barbie-a-personal-reflection.html",
         category: ["CULTURE & HERITAGE"],
 }
-    ,
-    {
-        heading: "How to watch Aangan HUM TV Drama?",
-        description: "A gripping tale unraveling passion, rebellion, abuse, and empowerment. Enter the riveting world of Aangan.",
-        date: "2023-07-29",
-        coverImage: "https://www.masala.com/cloud/2021/08/01/MTkgvG3S-aangan.jpg-2-1200x675.jpg",
-        filePath: "How-to-watch-Aangan-2018-HUM-TV)-TV-series-of-the-month-1.html",
-        category: 'CULTURE & HERITAGE',
-    }
     ,
     {
         heading: "Women in cinema & Diverse Cinematic Narratives!",
