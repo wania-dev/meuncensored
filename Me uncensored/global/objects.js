@@ -1,4 +1,13 @@
 let Posts = [
+  {
+heading: "''Nawabdin Electrician"",
+description: "The Money Heist: a complete marxist analysis of Daniyal Mueenuddin's short story",
+date: "2024-05-25",
+coverImage: "https://media.newyorker.com/photos/5909319a2179605b11ad2006/master/w_2240,c_limit/070827_r16547_p646.jpg",
+filePath: "Literary-Theory-Nawabdin-Electrician.htm",
+category: ["LITERATURE", "CULTURE & HERITAGE"],
+}
+  ,
 {
 heading: "How to read a book?",
 description: `Based on Mortimer Adler's "How to Read a Book", this article dissects reading like a frog in biology class, along with some personal ranting, roasts, and anecdotes.`,
@@ -30,7 +39,7 @@ category: ["LITERATURE"],
         heading: "Women in cinema & Diverse Cinematic Narratives!",
         description: "Are 'Item Numbers' icons of feminism or products of the patriarchy?",
         date: "2023-07-03",
-        coverImage: "https://panoslondon.panosnetwork.org/wp-content/files/2012/01/00148563-460x306.jpg",
+        coverImage: "",
         filePath: "Women-in-cinema-and-the-Path-for-Diverse-Cinematic-Narratives.htm",
         category: "CULTURE & HERITAGE",
     },
