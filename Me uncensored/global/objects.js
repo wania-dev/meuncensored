@@ -4,7 +4,7 @@ heading: '"Nawabdin Electrician"',
 description: "The Money Heist: a complete marxist analysis of Daniyal Mueenuddin's short story",
 date: "2024-05-25",
 coverImage: "https://media.newyorker.com/photos/5909319a2179605b11ad2006/master/w_2240,c_limit/070827_r16547_p646.jpg",
-filePath: "Literary-Theory-Nawabdin-Electrician.htm",
+filePath: "Literary-Theory-Nawabdin-Electrician.html",
 category: ["LITERATURE", "CULTURE & HERITAGE"],
 }
   ,
