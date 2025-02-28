@@ -38,8 +38,8 @@ function displayPosts(startIndex, category) {
     case 'CULTURE & HERITAGE':
       selectedButton.querySelector('.ch').classList.add('active');
       break;
-    case 'TECHNOLOGY & INNOVATION':
-      selectedButton.querySelector('.tech').classList.add('active');
+    case 'PHILOSOPHY READINGS':
+      selectedButton.querySelector('.pr').classList.add('active');
       break;
     case 'POLITICS & CURRENT EVENTS':
       selectedButton.querySelector('.polC').classList.add('active');
