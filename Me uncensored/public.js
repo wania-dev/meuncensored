@@ -39,7 +39,7 @@ function displayPosts(startIndex, category) {
       selectedButton.querySelector('.ch').classList.add('active');
       break;
     case 'PHILOSOPHY READINGS':
-      selectedButton.querySelector('.pr').classList.add('active');
+      selectedButton.querySelector('.tech').classList.add('active');
       break;
     case 'POLITICS & CURRENT EVENTS':
       selectedButton.querySelector('.polC').classList.add('active');
